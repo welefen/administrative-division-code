@@ -19,10 +19,20 @@ const content = fs.readFileSync(filepath, 'utf8');
 const data = [];
 let province = {};
 let city = {};
+let tmp = '';
 content.split('\n').forEach(item => {
   item = item.trim();
   if (!item) return;
   item = item.split(/\s+/);
+  if (item.length === 1) {
+    if (!tmp) {
+      tmp = item[0];
+      return;
+    }
+    item[1] = item[0];
+    item[0] = tmp;
+    tmp = '';
+  }
   // 省
   if (/^\d{2}0{4}$/.test(item[0])) {
     if (!helper.isEmpty(city)) {
