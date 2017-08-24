@@ -15,14 +15,14 @@ files.forEach(item => {
   const content = fs.readFileSync(path.join(templatePath, item), 'utf8');
   templates.push({extname: path.extname(item), content});
 });
-
-
 const content = fs.readFileSync(filepath, 'utf8');
 const data = [];
 let province = {};
 let city = {};
 content.split('\n').forEach(item => {
-  item = item.trim().split(/\s+/);
+  item = item.trim();
+  if (!item) return;
+  item = item.split(/\s+/);
   // 省
   if (/^\d{2}0{4}$/.test(item[0])) {
     if (!helper.isEmpty(city)) {
