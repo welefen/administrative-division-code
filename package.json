@@ -1,0 +1,26 @@
+{
+  "name": "administrative-division-code",
+  "version": "1.0.0",
+  "description": "最新县及县以上行政区划代码",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welefen/administrative-division-code.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/welefen/administrative-division-code/issues"
+  },
+  "homepage": "https://github.com/welefen/administrative-division-code#readme",
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-think": "^1.0.2"
+  },
+  "dependencies": {
+    "think-helper": "^1.0.20"
+  }
+}
